@@ -1,1 +1,8 @@
 <h1>Homepage</h1>
+<h2>Number: {{ number }}</h2>
+
+<form #postForm="ngForm">
+  <input type="text" name="min" placeholder="Minimo" ngModel>
+  <input type="text" name="max" placeholder="Massimo" ngModel>
+  <button (click)="postRequest(postForm.value.min, postForm.value.max)" >Invia</button>
+</form>
